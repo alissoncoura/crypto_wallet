@@ -8,9 +8,11 @@ namespace :dev do
 
       show_spinner("Migrando o BD ...") {%x(rails db:migrate)}
 
+      %x(rails dev:add_mining_types)
+
       %x(rails dev:add_coins)
 
-      %x(rails dev:add_mining_types)
+
 
     else
       puts "Você não está em ambiente de desenvolvimento!"
@@ -24,25 +26,29 @@ namespace :dev do
   {
     description: "Bitcoin",
     acronym: "BTC",
-    url_image: "https://cdn-icons-png.flaticon.com/256/10454/10454604.png"
+    url_image: "https://cdn-icons-png.flaticon.com/256/10454/10454604.png",
+    mining_type: MiningType.all.sample
   },
 
   {
     description: "Ethereum",
     acronym: "ETH",
-    url_image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/ethereum-2752194-2285011.png?f=webp"
+    url_image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/ethereum-2752194-2285011.png?f=webp",
+    mining_type: MiningType.all.sample
   },
 
   {
     description: "Dash",
     acronym: "DASH",
-    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"
+    url_image: "https://cryptologos.cc/logos/dash-dash-logo.png",
+    mining_type: MiningType.all.sample
   },
 
   {
     description: "BNB",
     acronym: "BNB",
-    url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Binance-Coin-BNB-icon.png"
+    url_image: "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Binance-Coin-BNB-icon.png",
+    mining_type: MiningType.all.sample
   }
 ]
 
