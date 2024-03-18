@@ -31,8 +31,24 @@
 
 en:
   actual_locale: "English (International)"
+  welcome: "welcome!"
+  messages:
+    welcome: "This is the crypto wallet, an app for you to register and track your cryptocurrencies"
+    menu: "To get started, select one of the options below:"
+    confirm: "Are you sure?"
   hello: "Hello world"
   links:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
+    new: "New"
+    back: "Back"
+  new: 
+    coin: "New Coin"
+    mining_type: "New Mining Type"
+  editing: 
+    coin: "Edit Coin"
+    mining_type: "Edit Mining Type"
+  Showing: 
+    coin: "Showing Coin"
+    mining_type: "Showing Mining Type"
